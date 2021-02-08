@@ -1,0 +1,148 @@
+:root
+{
+    --bacground:hsl(185, 75%, 39%);
+    --size-circle-width:450px;
+    --size-circle-heigth:450px;
+    --color-circle:hsl(185, 70%, 48%);
+    --color-card:white;
+    --bacground-header:url('../profile-card-component-main/images/bg-pattern-card.svg');
+}
+
+html
+{
+    background-color:var(--bacground) ;
+    position: relative;
+}
+
+html::before,
+html::after
+{
+   content: '';
+   position: fixed;
+   display: block;
+   width: var(--size-circle-width);
+   height:var(--size-circle-heigth); 
+   background-color: var(--color-circle);
+   border-radius: 50%;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+html::before
+{
+  top: -150px;  
+  left: -100px;
+  animation: moverReves 2s infinite;
+}
+html::after
+{
+    bottom: -150px;
+    right: -100px;
+    animation: mover 2s infinite;
+}
+@keyframes mover
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(30px);
+    }
+}
+@keyframes moverReves
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(-30px);
+    }
+}
+
+
+/* tarjeta */
+.card
+{
+    position: relative;
+    width: 320px;
+    height: 380px;
+    border-radius: 10px;
+    background-color: var(--color-card);
+    overflow: hidden;
+    z-index: 1;
+}
+.card__header
+{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-image: var(--bacground-header);   
+}
+.card__image
+{
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    left:50%;
+    /* lo corremos en el eje x menos el 50% para centrarlo del todo porque la imagen se hubica a la mitad pero de una de las puntas de la foto osea no lo toma 
+    del medio por eso lo corremos -50% oar centrarlo y 40% para bajarlo un poco */
+    transform: translate(-50%,50%);
+    background-color: var(--color-card);
+    padding: 3px ;
+}
+
+.card-body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100px;
+}
+.card__text
+{
+    margin: 0;
+    line-height: 2;
+    font-weight: 550;
+}
+.card__text--ligth
+{
+    color: gray;
+    font-weight: bold;
+}
+.card__text--size
+{
+    font-size: .8rem;
+}
+.card__footer
+{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 10px;
+    border-top: 1px solid gray ;
+}
+.card__stats
+{
+    /* para que todos los dic ocupen todo y quede bien centrador */
+    width: 100%;
+}
+.card__number
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+

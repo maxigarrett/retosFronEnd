@@ -1,0 +1,98 @@
+:root
+{
+    --dark-magenta:hsl(300, 43%, 22%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Soft-Pink: hsl(333, 26%, 93%);
+    --pink:hsl(333, 48%, 51%);
+}
+body
+{
+    font-family: 'Spartan', sans-serif;
+}
+.header
+{
+    text-align: center;
+    padding: 20px 10px 30px;
+    font-size: 1rem;
+}
+.header__title
+{
+    font-weight: 700;
+    color: var(--dark-magenta);
+
+}
+.header__subtitle
+{
+    font-weight: 400;
+    color:var(--Dark-Grayish-Magenta);
+}
+
+/* sectionde las estrellas */
+.rates
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.rated
+{
+    background-color: var(--Soft-Pink);
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.rated__star
+{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #ef9546;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* SECTION TESTIMONIALS */
+.testimonials
+{
+    /* display: flex; */
+}
+.testimonial
+{
+    background-color: var(--dark-magenta);
+    border-radius: 5px;
+    padding: 20px 5px;
+    margin-bottom: 10px;
+}
+.testimonial__header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial__autor
+{
+    margin-left: 60px;
+}
+.testimonial__image
+{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.testimonial__title
+{
+    font-size: 15px;
+    color: #fff;
+    margin: 0;
+}
+.testimonial__subtitle
+{
+    color: var(--pink);
+    margin: 0;
+}
+.testimonial__text
+{
+    color: #fff;
+    margin: 10px 25px;
+    font-size: 14px;
+}

@@ -133,10 +133,7 @@ body
 }
 
 /* SECTION TESTIMONIALS */
-.testimonials
-{
-    /* display: flex; */
-}
+
 @media screen and (min-width:768px){
     .testimonials{
         grid-column: 1/-1;

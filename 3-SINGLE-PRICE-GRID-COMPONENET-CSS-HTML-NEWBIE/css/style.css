@@ -10,9 +10,8 @@
     /* FONDO */
     --Grayish-Blue: hsl(218, 22%, 67%)
 }
-.main{
-    display: grid;
-}
+
+
 body{
     background-color: var(--Grayish-Blue);
     font-family: 'Karla', sans-serif;
@@ -22,10 +21,22 @@ body{
 
     box-shadow: 0px 0px 25px 10px rgba(0, 0,0, .4);
 }
+
+@media screen and (min-width:1024px){
+    .section{
+        display: grid;
+        max-width: 800px;
+        margin: 0 auto;
+        grid-template-columns: repeat(2,1fr);
+        /* grid-template-rows: repeat(1,1fr); */
+    }
+}
+
 .box{
     padding: 20px;
     font-weight: 700;
 }
+
 .box__tittle,.box__subtittle,.box__text,
 .box__currency,.box__periodicity{
     color: var(--white);
@@ -67,6 +78,12 @@ body{
     padding: 0;
     color: var(--grey-list);
 }
+@media screen and (min-width:1024px){
+    .list,.box__tittle--desktop{
+        margin-left: 1.5rem;
+    }
+}
+
 .list__item{
     margin-top: .5rem;
 }
@@ -85,6 +102,13 @@ body{
 .box--white{
     border-radius: 5px 5px 0px 0px;
     background-color: var(--white);
+}
+@media screen and (min-width:1024px){
+    .box--white{
+        grid-column: 1/-1;
+        margin: 0;
+        padding-bottom: 0;
+    }
 }
 .box--cyan{
     background-color: var(--Cyan);

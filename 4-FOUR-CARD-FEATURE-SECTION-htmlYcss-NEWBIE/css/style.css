@@ -1,0 +1,78 @@
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-Dark-Blue: hsl(234, 8%, 50%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-size: 16px;
+    font-family: Poppins,sans-serif;
+    background-color:var(--Very-Light-Gray) ;
+}
+
+.header{
+    padding: 50px 5px;
+}
+
+.header__tittle{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 200;
+}
+.header__text{
+    text-align: center;
+    font-weight: 400;
+    color: var(--Very-Dark-Blue);
+    width: 95%;
+    margin: 0 auto;
+}
+
+.cards{
+    display: grid;
+    padding: 0 20px;
+}
+.card{
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 25px 3px rgba(40, 27, 114, 0.1);
+    margin-bottom: 30px;
+}
+.card__header{
+    width: 100%;
+}
+.card__tittle,.card__description{
+    margin: 0;
+}
+.card__tittle{
+    font-weight: 600;
+}
+.card__description{
+    font-weight: 400;
+    color: var(--Very-Dark-Blue);
+    font-size: .9rem;
+    margin-top: 10px;
+}
+.card__main{
+    padding: 30px 0 0 0 ;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card--cyan{
+    border-top: 4px solid var(--Cyan);
+}
+.card--red{
+    border-top:4px solid var(--Red);
+}
+.card--orange{
+    border-top:4px solid var(--Orange);
+}
+.card--blue{
+    border-top:4px solid var(--Blue);
+}

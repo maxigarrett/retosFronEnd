@@ -14,10 +14,18 @@ body{
     font-size: 16px;
     font-family: Poppins,sans-serif;
     background-color:var(--Very-Light-Gray) ;
+    max-width: 1440px;
 }
 
 .header{
     padding: 50px 5px;
+}
+@media screen and (min-width:1024px)
+{
+    .header{
+        width: 40%;
+        margin: 0 auto;
+    }
 }
 
 .header__tittle{
@@ -30,12 +38,30 @@ body{
     font-weight: 400;
     color: var(--Very-Dark-Blue);
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
+@media screen and (min-width:1024px)
+{
+    .header__text{
+        width: 100%;
+    }
+}
+
+
 
 .cards{
     display: grid;
     padding: 0 20px;
+}
+@media screen and (min-width:1024px)
+{
+    .cards{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 30px;
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
 }
 .card{
     padding:20px;
@@ -67,12 +93,41 @@ body{
 .card--cyan{
     border-top: 4px solid var(--Cyan);
 }
+@media screen and (min-width:1024px)
+{
+    .card--cyan{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        transform: translateY(-50%);
+    }
+}
 .card--red{
     border-top:4px solid var(--Red);
+}
+@media screen and (min-width:1024px)
+{
+    .card--red{
+        grid-column: 2/3;
+    }
 }
 .card--orange{
     border-top:4px solid var(--Orange);
 }
+@media screen and (min-width:1024px)
+{
+    .card--orange{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
 .card--blue{
     border-top:4px solid var(--Blue);
+}
+@media screen and (min-width:1024px)
+{
+    .card--blue{
+        grid-column: 3/3;
+        grid-row: 2/3;
+        transform: translateY(-50%);
+    }
 }

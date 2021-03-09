@@ -1,0 +1,111 @@
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    --white:#ffff;
+}
+body{
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Grayish-Blue);
+    padding: 50px 20px;
+}
+.header{
+    overflow: hidden;
+    height: 220px;
+}
+.header_image{
+    max-width: 100%;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+}
+.article{
+    background-color: var(--Light-Grayish-Blue);
+    padding: 20px 25px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.article__title{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.article__text{
+    color: var(--Grayish-Blue) ;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.footer__date,
+.footer__description{
+    margin: 0;
+}
+.footer__image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.container_description{
+    margin-right: auto;
+    margin-left: 15px;
+}
+.footer__description{
+    font-size: .8rem;
+    font-weight: 700;
+}
+.footer__date{
+    font-size:.7rem ;
+    font-weight: 500;
+    margin-top: 1px;
+    color: var(--Grayish-Blue) ;
+}
+.share{
+    position: relative;
+    z-index: 10;
+}
+.share__icon{
+    border-radius: 50%;
+    padding: 8px;
+    background-color:rgba(26, 26, 26, 0.103) ;
+}
+.share__icon--active{
+    filter: brightness(0) invert(1);
+}
+.tooltip{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 0 25px;
+    transform: scale(0);
+    transition: transform .5s;
+    
+}
+.tooltip.active{   
+    transform: scale(1);
+}
+.tooltip__share{
+    color: var(--white);
+    margin-right: 30px;
+    color: var(--Grayish-Blue);
+    letter-spacing: 5px;
+}
+.tootltip_social{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+

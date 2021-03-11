@@ -1,6 +1,9 @@
-const main= document.getElementById('main');
-main.addEventListener('click',(e)=>{
-    if(e.target.classList.contains('article')){
-        console.log(e.target.children.children);
-    }
+const articleAcordeon=document.querySelectorAll('.article');
+
+
+articleAcordeon.forEach(element=>{
+	console.log(element);
+	element.addEventListener('click',(e)=>{
+		console.log(e.target);
+	})
 })

@@ -40,24 +40,23 @@ body{
 }
 .article{
     position: relative;
+    overflow:hidden;
+    height:30px;
+    transition: height .5s;
+    padding: 0 0 10px 0;
 }
 
-
-.article__container{
-    transform: scaleY(0);
-    overflow: hidden;
+.article--show{
+    height: 120px;
 }
-.article__container--show{
-    transform: scaleY(1);
-
-}
-
-
 .article__title{
     font-size: 14px;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+}
+.article__title--active{
+    font-weight: 700;
 }
 .article__icon{
     width: 10px;

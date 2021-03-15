@@ -87,7 +87,7 @@ body{
     .section::after{
         content: url('../faq-accordion-card-main/images/illustration-box-desktop.svg');
         position: absolute;
-        top: 55%;
+        top: 52%;
         right: 80%;
         z-index: 10;
     }

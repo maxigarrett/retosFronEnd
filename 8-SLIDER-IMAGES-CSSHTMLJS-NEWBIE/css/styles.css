@@ -7,20 +7,45 @@ body{
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
 }
+@media screen and (min-width:1440px){
+    body{
+        max-width: 1440px;
+        background-color:var(--Grayish-Blue);
+        padding: 100px 50px;
+    }
+}
 .card-container{
     background-color: var(--white);
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     min-height: 100vh;
-   
 }
+@media screen and (min-width:1440px){
+    .card-container{
+        min-height: 80vh;
+    }
+}
+	
 .card{
+    display: grid;
    position: absolute;
    height: 100vh;
    opacity: 1;
    transition: opacity 2s;
    transform: translateX(0);
 }
+@media screen and (min-width:1440px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+        height: 100%;
+        background-image: url('../asset/img/images/pattern-curve.svg');
+        background-repeat: no-repeat;
+        background-position-y: 100%;
+    }
+}
+
 .card--show{
     transform: translateX(100%);
     opacity: 0;
@@ -37,11 +62,22 @@ body{
     background-size: 100%;
     background-position-y: 10px;
 }
+@media screen and (min-width:1440px){
+    .card__header{
+        grid-column: 2/-1;
+        margin-right: 100px;
+    }
+}
 .card__image{
     max-width: 80%;
     border-radius: 5px;
     transform: scale(1);
     transition: transform 1s;
+}
+@media screen and (min-width:1440px){
+    .card__image{
+        max-width: 85%;
+    }
 }
 .card__image--show{
  transform: scale(0);   
@@ -53,6 +89,22 @@ body{
     font-weight: 300;
     font-size: 1rem;
 }
+@media screen and (min-width:1440px){
+    .card__description{
+        position: relative;
+        width: 80%;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        text-align:left;
+        z-index: 10;
+        left: 220px;
+       line-height: 35px;
+    }
+}
 .footer{
     background-image: url('../asset/img/images/pattern-curve.svg');
     background-repeat: no-repeat;
@@ -60,8 +112,21 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 60px;
+    align-items: center; 
+}
+@media screen and (min-width:1440px){
+    .footer{
+        position: relative;
+        flex-direction: row;
+        width: 350px;
+        grid-column:1/2 ;
+        grid-row: 2/2;
+        justify-content: flex-start;
+        background-image: url('');
+        padding-right: 30px;
+        top: -200px;
+        left: 220px;
+    }
 }
 .footer__name,
 .footer__ocupation{
@@ -72,6 +137,11 @@ body{
 }
 .footer__ocupation{
     color: var(--Grayish-Blue);
+}
+@media screen and (min-width:1440px){
+    .footer__ocupation{
+        margin-left: 5px;
+    }
 }
 
 .slide-arrows{
@@ -89,4 +159,10 @@ body{
     padding: 5px 10px;
     background-color: var(--white);
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, .3);
+}
+@media screen and (min-width:1440px){
+    .slide-arrows{
+        top: 530px;
+        left: 60%;
+    }
 }

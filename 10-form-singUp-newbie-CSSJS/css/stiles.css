@@ -53,6 +53,10 @@ body{
     border: none;
     border: 1px solid var(--Grayish-Blue);
     border-radius: 5px;
+}
 
-    
+.form__terms{
+    color: grey;
+    font-size: .6rem;
+    width: 220px;
 }

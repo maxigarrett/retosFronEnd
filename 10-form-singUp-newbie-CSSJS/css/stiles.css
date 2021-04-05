@@ -5,6 +5,7 @@
     --Dark-Blue: hsl(249, 10%, 26%);
     --Grayish-Blue: hsl(246, 25%, 77%);
     --white:#fff;
+    --shadow-button-green: hsl(154, 57%, 38%);
 }
 
 body{
@@ -29,7 +30,7 @@ body{
     border-radius: 10px;
     width: 230px;
     margin: 0 auto 25px auto;
-    box-shadow: 1px 7px 5px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 7px 5px 3px rgba(0, 0, 0, 0.2);
 }
 .section__text-span{
     color: var(--Grayish-Blue);
@@ -40,7 +41,7 @@ body{
     border-radius: 10px;
     width: 330px;
     margin: 0 auto;
-    box-shadow: 1px 7px 5px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 7px 5px 3px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,8 +56,26 @@ body{
     border-radius: 5px;
 }
 
+.form__submit{
+    border: none;
+    width: 280px;
+    padding: 20px 0;
+    background-color: transparent;
+    background-color: var(--Green);
+    border-radius: 5px;
+    box-shadow: 1px 3px 1px  var(--shadow-button-green);
+    font-weight: 600;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .form__terms{
     color: grey;
     font-size: .6rem;
     width: 220px;
+}
+.form__terms a{
+    color: var(--body);
+    font-weight: 700;
 }

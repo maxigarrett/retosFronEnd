@@ -37,8 +37,6 @@ body{
 }
 
 .form{
-    background-color: var(--white);
-    border-radius: 10px;
     width: 330px;
     margin: 0 auto;
     box-shadow: 0px 7px 5px 3px rgba(0, 0, 0, 0.2);
@@ -46,6 +44,33 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.form__field{
+    position: relative;
+}
+.form__field.error{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.form__field.error input{
+    border: 2px solid var(--body);
+}
+.form__field.error::after{
+    content: attr(data-error);
+    position: absolute;
+    color: var(--body);
+    left: 40%;
+    bottom: -10px;
+}
+.form__field.error::before{
+    content: url('../asset/images/icon-error.svg');
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+    transform: translateY(50%);
 }
 ::placeholder{
     font-weight: 700;
@@ -59,6 +84,11 @@ body{
     border-radius: 5px;
     padding-left: 15px;
 }
+.form__input:focus{
+    outline: none;
+    border:2px solid var(--Dark-Blue);
+}
+
 
 .form__submit{
     border: none;

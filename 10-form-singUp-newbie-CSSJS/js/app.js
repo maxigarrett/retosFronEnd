@@ -47,8 +47,7 @@ const ValidateForm=(e)=>{
         displayFieldError('password-field','Password cannot by empty')
     }else{
         hideFieldError('password-field')
-    }
-    
+    }   
 }
 
 formElement.addEventListener('submit',ValidateForm);

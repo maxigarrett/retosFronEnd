@@ -1,0 +1,41 @@
+:root{
+    --nuclear-color:#54e6af;
+    --bg-color:#121725;
+    --blue-gray-light:#5a668a;
+    --blue-gray-dark:#2c344b;
+    --grey-ligth:#c2cbe5;
+}
+
+body{
+    font-family:sans-serif;
+}
+
+.header{
+    text-align: center;
+    padding: 30px 0;
+}
+.article__header{
+    text-align: center;
+    color: var(--nuclear-color);
+}
+.article__header span{
+    color: var(--grey-ligth);
+}
+.article__description{
+    text-align: center;
+}
+.social__list{
+    display: flex;
+    justify-content: space-between;
+}
+.form__field{
+    display: flex;
+    flex-direction: column;
+}
+.error{
+    display: none;
+}
+
+.show__error{
+    display: block;
+}

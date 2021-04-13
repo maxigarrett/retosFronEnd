@@ -6,7 +6,7 @@ const emailElement=formElement['email'];
 const passwordElement=formElement['pasword'];
 
 //validacion regExp para que no este vacio
-emtyEstring=/^[a-zA-Z0-9@._]{3,}$/;
+emtyEstring=/^[a-zA-Z0-9@._]{3,20}$/;
 
 const inputElement=[
     {elementId:'first-name-field',inputDOMElement:firstNameElement,regExp:emtyEstring,errorMessage:'first name cannot by empty'},
@@ -50,7 +50,7 @@ formElement.addEventListener('focusin',(e)=>{
 formElement.addEventListener('focusout',(e)=>{
     if(e.target.tagName=='INPUT' & e.target.value==''){
         inputElement.forEach(input=>{
-            if(input.elementId==e.target.parentElement.id){
+            if(input.elementId==e.target.parentElement.id & !input.regExp.test(e.target.value)){
                 displayFieldError(input.elementId,input.errorMessage);
             }
         })
